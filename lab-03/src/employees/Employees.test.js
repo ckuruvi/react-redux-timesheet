@@ -4,4 +4,21 @@ import { shallow } from 'enzyme';
 import EmployeeTable from './EmployeeTable';
 
 describe('<Employees />', () => {
+
+    let wrapper;
+    beforeEach(() => {
+        wrapper = shallow(<Employees/>)
+    })
+
+    it('should render correctly', () => {
+        expect(wrapper).toHaveLength(1)
+    })
+
+    it('should pass employees down to table', () => {
+        wrapper.setState({
+            employees:[{},{}]
+        })
+
+        expect(wrapper.find(EmployeeTable).prop('employees')).toHaveLength(2)
+    })
 });
