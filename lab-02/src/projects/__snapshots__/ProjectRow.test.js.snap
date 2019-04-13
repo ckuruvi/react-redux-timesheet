@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProjectRow /> renders correctly 1`] = `
+<tr>
+  <td>
+    NAME
+  </td>
+  <td>
+    DESCRIPTION
+  </td>
+</tr>
+`;
